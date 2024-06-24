@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sahifa nomi</title>
+    <style>
+        /* Bu yerda sizning CSS kodingiz bo'ladi */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            margin: 20px;
+            text-align: center;
+        }
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+        }
+        section {
+            margin: 20px;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #333;
+            color: #fff;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Sahifa Sarlavhasi</h1>
+    </header>
+    <nav>
+        <a href="{% url 'home' %}">Bosh sahifa</a>
+        <a href="{% url 'about' %}">Biz haqimizda</a>
+        <a href="{% url 'contact'%}">Aloqa</a>
+    </nav>
+
+{% block  content%}
+{% endblock%}
+
+
+
+    <footer>
+        <p>&copy; 2024 Sizning Kompaniya. Barcha huquqlar himoyalangan.</p>
+    </footer>
+    <script>
+        // Bu yerda sizning JavaScript kodingiz bo'ladi
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Sahifa yuklandi!');
+        });
+    </script>
+</body>
+</html>
